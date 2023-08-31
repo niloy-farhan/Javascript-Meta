@@ -61,9 +61,33 @@ train5.toggleLights();
 train5.lightsStatus();
 highSpeed1.toggleLights();
 
+//Using class instance as another class' constructor's property
+
+class StationaryBike{
+    constructor(position, gears) {
+        this.position = position;
+        this.gears = gears;
+    }
+}
+
+class treadMill {
+    constructor(position, modes) {
+        this.position = position;
+        this.modes = modes;
+    }
+}
+
+class Gym {
+    constructor(openHrs, StationaryBikePos, treadMillPos) {
+        this.openHrs = openHrs;
+        this.stationaryBike = new StationaryBike(StationaryBikePos, 8);
+        this.treadMill =  new treadMill(treadMillPos, 5);
+    }
+}
+
+var boxingGym = new Gym ("7-22", "right corner", "left corner");
 
 
-
-train1 = new Train('blue', false);
-highSpeedTrain1 = new HighSpeedTrain (200, false, 'green', false);
-
+console.log(boxingGym.openHrs);
+console.log(boxingGym.stationaryBike);
+console.log(boxingGym.treadMill);
