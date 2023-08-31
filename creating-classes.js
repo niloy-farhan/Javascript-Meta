@@ -6,7 +6,7 @@ class Train {
     }
 
     toggleLights() {
-        this.lightsOn = this.lightsOn;
+        this.lightsOn = !this.lightsOn;
     }
 
     lightsStatus() {
@@ -22,4 +22,23 @@ class Train {
         console.log(proto);
     }
 }
+
+
+class HighSpeedTrain extends Train {
+    constructor(passengers, highSpeedOn, color, lightsOn) {
+        super(color, lightsOn);
+        this.passengers = passengers;
+        this.highspeedOn = highSpeedOn;
+    }
+
+    toggleHighSpeed() {
+        this.highspeedOn = !this.highspeedOn;
+        console.log("High speed status: ", this.highspeedOn);
+    }
+}
+
+var myFirstTrain =
+
+train1 = new Train('blue', false);
+highSpeedTrain1 = new HighSpeedTrain (200, false, 'green', false);
 
