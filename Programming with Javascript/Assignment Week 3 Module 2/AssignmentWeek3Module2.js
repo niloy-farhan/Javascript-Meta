@@ -43,4 +43,3 @@ function manager() {
 // call the funtion to get output otherwise the code won't work
 console.log(intern());
 console.log(manager());
-
